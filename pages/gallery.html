@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시공사례 - 가창전기</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .gallery-section {
+            padding: 120px 5% 5rem;
+        }
+        
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .gallery-header h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border: none;
+            background: #f0f0f0;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn.active {
+            background: #3498db;
+            color: white;
+        }
+        
+        .gallery-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .gallery-item {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: #fff;
+            padding: 1rem;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-title {
+            text-align: left;
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            margin-left: 0.5rem;
+        }
+
+        .gallery-slider {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+            background: #f5f5f5;
+            margin-bottom: 1.2rem;
+        }
+
+        .gallery-slider img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #f5f5f5;
+            transition: opacity 0.5s ease;
+            cursor: pointer;
+        }
+
+        .gallery-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .gallery-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #ddd;
+            display: inline-block;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .gallery-dot.active {
+            background: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../images/logo.png" alt="가창전기 로고" class="company-logo">
+                <h1>가창전기</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="about.html">회사소개</a></li>
+                <li><a href="gallery.html" class="active">시공사례</a></li>
+                <li><a href="services.html">서비스영역</a></li>
+                <li><a href="contact.html">연락처</a></li>
+                <li><a href="location.html">오시는길</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="gallery-section">
+        <div class="gallery-header">
+            <h2>시공 사례</h2>
+            <p>다양한 프로젝트의 성공적인 시공 사례를 소개합니다</p>
+        </div>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item" data-category="public">
+                <h3 class="gallery-title">공공기관</h3>
+                <div class="gallery-slider" data-category="public">
+                    <img src="../images/gallery/public/public1.png" alt="공공기관 시공사례 1">
+                    <img src="../images/gallery/public/public2.png" alt="공공기관 시공사례 2">
+                </div>
+            </div>
+            <div class="gallery-item" data-category="residential">
+                <h3 class="gallery-title">주거공간</h3>
+                <div class="gallery-slider" data-category="residential">
+                    <img src="../images/gallery/residential/residential1.png" alt="주거공간 시공사례 1">
+                    <img src="../images/gallery/residential/residential2.png" alt="주거공간 시공사례 2">
+                </div>
+            </div>
+            <div class="gallery-item" data-category="extension">
+                <h3 class="gallery-title">증설</h3>
+                <div class="gallery-slider" data-category="extension">
+                    <img src="../images/gallery/extension/extension1.png" alt="증설 시공사례 1">
+                    <img src="../images/gallery/extension/extension2.png" alt="증설 시공사례 2">
+                </div>
+            </div>
+            <div class="gallery-item" data-category="repair">
+                <h3 class="gallery-title">수리</h3>
+                <div class="gallery-slider" data-category="repair">
+                    <img src="../images/gallery/repair/repair1.png" alt="수리 시공사례 1">
+                    <img src="../images/gallery/repair/repair2.png" alt="수리 시공사례 2">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>연락처</h4>
+                <p>전화: 055-945-8291</p>
+                <p>이메일: gachang8291@daum.net</p>
+            </div>
+            <div class="footer-section">
+                <h4>영업시간</h4>
+                <p>평일: 09:00 - 18:00</p>
+                <p>주말 및 공휴일: 휴무</p>
+            </div>
+            <div class="footer-section">
+                <h4>주소</h4>
+                <p>경남 거창군 가조가야로 1111</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 가창전기. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+    // 각 슬라이더별로 이미지 자동 전환 + 도트 네비게이션
+    document.querySelectorAll('.gallery-slider').forEach(function(slider) {
+        const images = slider.querySelectorAll('img');
+        if (images.length <= 1) return;
+        let idx = 0;
+        let interval = null;
+
+        // 도트 컨테이너 생성
+        const dots = document.createElement('div');
+        dots.className = 'gallery-dots';
+        images.forEach((img, i) => {
+            const dot = document.createElement('span');
+            dot.className = 'gallery-dot';
+            dot.addEventListener('mouseenter', function() {
+                idx = i;
+                showImage(idx);
+            });
+            dots.appendChild(dot);
+        });
+        slider.parentNode.insertBefore(dots, slider.nextSibling);
+
+        function showImage(i) {
+            images.forEach((img, j) => img.style.display = (i === j ? 'block' : 'none'));
+            const dotEls = dots.querySelectorAll('.gallery-dot');
+            dotEls.forEach((dot, j) => dot.classList.toggle('active', i === j));
+        }
+        function startSlider() {
+            interval = setInterval(() => {
+                idx = (idx + 1) % images.length;
+                showImage(idx);
+            }, 3000);
+        }
+        function stopSlider() {
+            clearInterval(interval);
+        }
+        slider.addEventListener('mouseenter', stopSlider);
+        slider.addEventListener('mouseleave', startSlider);
+        // 클릭 시 다음 사진
+        slider.addEventListener('click', function(e) {
+            idx = (idx + 1) % images.length;
+            showImage(idx);
+        });
+        // 우클릭(컨텍스트 메뉴 방지 + 이전 사진)
+        slider.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            idx = (idx - 1 + images.length) % images.length;
+            showImage(idx);
+        });
+        showImage(idx);
+        startSlider();
+    });
+    </script>
+</body>
+</html> 

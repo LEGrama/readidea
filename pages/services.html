@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서비스영역 - 가창전기</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .services-section {
+            padding: 120px 5% 5rem;
+        }
+        
+        .services-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .services-header h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .service-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .service-features {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .service-features li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .service-features li::before {
+            content: '✓';
+            color: #3498db;
+            position: absolute;
+            left: 0;
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 3rem;
+            background: #f9f9f9;
+            border-radius: 10px;
+            margin-top: 3rem;
+        }
+        
+        .cta-section h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../images/logo.png" alt="가창전기 로고" class="company-logo">
+                <h1>가창전기</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="about.html">회사소개</a></li>
+                <li><a href="gallery.html">시공사례</a></li>
+                <li><a href="services.html" class="active">서비스영역</a></li>
+                <li><a href="contact.html">연락처</a></li>
+                <li><a href="location.html">오시는길</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="services-section">
+        <div class="services-header">
+            <h2>서비스 영역</h2>
+            <p>전문적인 전기공사 서비스를 제공합니다</p>
+        </div>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-university"></i>
+                </div>
+                <h3>공공기관 전기공사</h3>
+                <p>관공서, 학교 등 공공기관의 전기설비 시공 및 유지보수</p>
+                <ul class="service-features">
+                    <li>공공시설 전기설비 시공</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3>주거공간 전기공사</h3>
+                <p>아파트, 주택 등 주거공간의 전기공사 및 리모델링</p>
+                <ul class="service-features">
+                    <li>조명 및 콘센트 설치</li>
+                    <li>스마트홈 시스템 구축</li>
+                    <li>노후 배선 교체</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-plus-square"></i>
+                </div>
+                <h3>전기설비 증설</h3>
+                <p>공장, 상가 등 산업시설의 전기설비 증설 및 확장</p>
+                <ul class="service-features">
+                    <li>고압/저압 설비 증설</li>
+                    <li>에너지 절감 시스템 구축</li>
+                    <li>공장/창고 전력 확장</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>전기설비 수리</h3>
+                <p>상가, 주택, 공장 등 다양한 공간의 전기설비 수리 및 긴급 복구</p>
+                <ul class="service-features">
+                    <li>누전/합선 등 고장 수리</li>
+                    <li>조명, 스위치, 콘센트 교체</li>
+                    <li>정기 점검 및 유지보수</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <h3>전문적인 전기공사 서비스가 필요하신가요?</h3>
+            <p>견적 문의 및 상담을 받아보세요.</p>
+            <a href="contact.html" class="cta-button">문의하기</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>연락처</h4>
+                <p>전화: 055-945-8291</p>
+                <p>이메일: gachang8291@daum.net</p>
+            </div>
+            <div class="footer-section">
+                <h4>영업시간</h4>
+                <p>평일: 09:00 - 18:00</p>
+                <p>주말 및 공휴일: 휴무</p>
+            </div>
+            <div class="footer-section">
+                <h4>주소</h4>
+                <p>경남 거창군 가조가야로 1111</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 가창전기. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회사소개 - 가창전기</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .about-section {
+            padding: 120px 5% 5rem;
+        }
+        
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .about-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .about-header h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .about-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .about-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .company-history {
+            background: #f9f9f9;
+            padding: 3rem;
+            border-radius: 10px;
+            margin-top: 3rem;
+        }
+        
+        .history-item {
+            display: flex;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .history-year {
+            min-width: 100px;
+            font-weight: bold;
+            color: #3498db;
+        }
+        
+        .history-content {
+            flex: 1;
+        }
+        
+        .history-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 50px;
+            top: 30px;
+            bottom: -20px;
+            width: 2px;
+            background: #3498db;
+        }
+        
+        .about-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../images/logo.png" alt="가창전기 로고" class="company-logo">
+                <h1>가창전기</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">홈</a></li>
+                <li><a href="about.html" class="active">회사소개</a></li>
+                <li><a href="gallery.html">시공사례</a></li>
+                <li><a href="services.html">서비스영역</a></li>
+                <li><a href="contact.html">연락처</a></li>
+                <li><a href="location.html">오시는길</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="about-section">
+        <div class="about-content">
+            <div class="about-header">
+                <h2>회사 소개</h2>
+                <p>전문성과 신뢰성을 바탕으로 최상의 전기공사 서비스를 제공합니다</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>비전</h3>
+                    <p>안전하고 신뢰할 수 있는 전기공사 서비스를 통해 고객의 삶의 질을 향상시키는 기업이 되겠습니다.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>미션</h3>
+                    <p>전기공사가 필요할 때 가장 먼저 추천할 수 있는 기업이 되고 싶습니다.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon"><i class="fas fa-star"></i></div>
+                    <h3>핵심가치</h3>
+                    <p>안전, 신뢰, 전문성, 고객만족을 최우선 가치로 삼고 있습니다.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>연락처</h4>
+                <p>전화: 055-945-8291</p>
+                <p>이메일: gachang8291@daum.net</p>
+            </div>
+            <div class="footer-section">
+                <h4>영업시간</h4>
+                <p>평일: 09:00 - 18:00</p>
+                <p>주말 및 공휴일: 휴무</p>
+            </div>
+            <div class="footer-section">
+                <h4>주소</h4>
+                <p>경남 거창군 가조가야로 1111</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 가창전기. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html> 
